@@ -1,5 +1,5 @@
 # LinguaViva - Sistema de Gestão Escolar
-
+.
 ## Descrição
 O LinguaViva é um sistema de gestão escolar para a escola de idiomas LinguaViva. O sistema permite o cadastro de alunos, professores e cursos, além da matrícula de alunos em diferentes cursos. O projeto é desenvolvido utilizando JavaScript e armazena dados no navegador através do `localStorage`.
 
