@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matrícula de Alunos - LinguaViva</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>LinguaViva</h1>
+      <nav>
+        <a href="landing.html">Voltar</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="form-container">
+        <h2>Matricular Aluno em Curso</h2>
+        <form id="matriculaForm">
+          <div class="form-group">
+            <label for="aluno">Aluno:</label>
+            <select id="aluno" required>
+              <option value="">Carregando alunos...</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="curso">Curso:</label>
+            <select id="curso" required>
+              <option value="">Carregando cursos...</option>
+            </select>
+          </div>
+
+          <button type="submit">Realizar Matrícula</button>
+        </form>
+      </div>
+    </main>
+
+    <script src="js/classes.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/matriculas.js"></script>
+  </body>
+</html>

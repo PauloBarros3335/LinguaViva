@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Curso - LinguaViva</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>LinguaViva</h1>
+      <nav>
+        <a href="landing.html">Voltar</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="form-container">
+        <h2>Cadastrar Curso</h2>
+        <form id="cadastroCursoForm">
+          <div class="form-group">
+            <label for="idioma">Idioma:</label>
+            <select id="idioma" required>
+              <option value="">Selecione um idioma</option>
+              <option value="Inglês">Inglês</option>
+              <option value="Espanhol">Espanhol</option>
+              <option value="Francês">Francês</option>
+              <option value="Alemão">Alemão</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="nivel">Nível:</label>
+            <select id="nivel" required>
+              <option value="">Selecione um nível</option>
+              <option value="Básico">Básico</option>
+              <option value="Intermediário">Intermediário</option>
+              <option value="Avançado">Avançado</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="professor">Professor Responsável:</label>
+            <select id="professor" required>
+              <option value="">Carregando professores...</option>
+            </select>
+          </div>
+
+          <button type="submit">Cadastrar Curso</button>
+        </form>
+      </div>
+    </main>
+
+    <script src="js/classes.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/cursos.js"></script>
+  </body>
+</html>
+<script>
+  // Carregar professores no select
+  document.addEventListener("DOMContentLoaded", function () {
+    const professorSelect = document.getElementById("professor");
+    escola.professores.forEach((professor) => {
+      const option = document.createElement("option");
+      option.value = professor.nome;
+      option.textContent = professor.nome;
+      professorSelect.appendChild(option);
+    });
+  });

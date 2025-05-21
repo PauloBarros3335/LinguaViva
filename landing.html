@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinguaViva - Página Inicial</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>LinguaViva</h1>
+      <nav>
+        <a href="landing.html">Início</a>
+        <a href="cadastro-aluno.html">Alunos</a>
+        <a href="cadastro-professor.html">Professores</a>
+        <a href="cadastro-curso.html">Cursos</a>
+        <a href="matricula.html">Matrículas</a>
+        <a href="turmas.html">Turmas</a>
+        <a href="#" id="logoutBtn">Sair</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Bem-vindo ao Sistema de Gestão</h2>
+      <p>Selecione uma das opções no menu acima para começar.</p>
+
+      <div class="stats">
+        <div class="stat-card">
+          <h3>Alunos</h3>
+          <p id="totalAlunos">0</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>Professores</h3>
+          <p id="totalProfessores">0</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>Cursos</h3>
+          <p id="totalCursos">0</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>Matrículas</h3>
+          <p id="totalMatriculas">0</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/classes.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Atualizar estatísticas
+        document.getElementById("totalAlunos").textContent =
+          escola.alunos.length;
+        document.getElementById("totalProfessores").textContent =
+          escola.professores.length;
+        document.getElementById("totalCursos").textContent =
+          escola.cursos.length;
+        document.getElementById("totalMatriculas").textContent =
+          escola.matriculas.length;
+
+        // Logout
+        document
+          .getElementById("logoutBtn")
+          .addEventListener("click", function () {
+            logout();
+          });
+      });
+    </script>
+  </body>
+</html>
