@@ -1,65 +1,32 @@
-<head>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <!-- Tabela e filtros -->
-  <script src="js/classes.js"></script>
-  <script src="js/utils.js"></script>
-  <script src="js/turmas.js"></script>
-  <!-- Lógica de filtros -->
-</body>
-<body>
-  <div class="container">
-    <h1>Turmas</h1>
-    <div class="filters">
-      <label for="filter">Filtrar por:</label>
-      <select id="filter" onchange="filterTable()">
-        <option value="">Selecione</option>
-        <option value="turma">Turma</option>
-        <option value="professor">Professor</option>
-        <option value="disciplina">Disciplina</option>
-      </select>
-      <input type="text" id="filterValue" placeholder="Valor do filtro" onkeyup="filterTable()" />
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gestão de Turmas</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Turmas</h1>
+
+      <div class="filters">
+        <label for="idiomaFilter">Idioma:</label>
+        <select id="idiomaFilter"></select>
+
+        <label for="nivelFilter">Nível:</label>
+        <select id="nivelFilter"></select>
+
+        <button id="filtrarBtn">Filtrar</button>
+      </div>
+
+      <table id="turmasTable">
+        <!-- Cabeçalho e corpo da tabela serão adicionados dinamicamente -->
+      </table>
     </div>
-    <table id="turmasTable">
-      <thead>
-        <tr>
-          <th>Turma</th>
-          <th>Professor</th>
-          <th>Disciplina</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
-      <tbody id="turmasBody">
-        <!-- As linhas da tabela serão preenchidas aqui -->
-      </tbody>
-    </table>
-  </div>
 
-  <!-- Modal para adicionar/editar turma -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h2 id="modalTitle">Adicionar Turma</h2>
-      <form id="turmaForm">
-        <!-- Campos do formulário -->
-        <label for="turma">Turma:</label><br />
-        <input type="text" id="turma" name="turma" required /><br />
-        <label for="professor">Professor:</label><br />
-        <input type="text" id="professor" name="professor" required /><br />
-        <label for="disciplina">Disciplina:</label><br />
-        <input type="text" id="disciplina" name="disciplina" required /><br />
-        <!-- Botões -->
-        <button type="button" onclick="saveTurma()">Salvar</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Script para manipulação do DOM e lógica de filtros -->
-  <script src="./js/turmas.js"></script>
-
-  <!-- Script para manipulação do modal -->
-  <script src="./js/modal.js"></script>
-
-  <!-- Script para manipulação da tabela -->
-  <script
+    <!-- Scripts -->
+    <script src="js/classes.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/turmas.js"></script>
+  </body>
+</html>
