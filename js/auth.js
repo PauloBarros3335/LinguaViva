@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const password = document.getElementById("password").value;
 
         // Credenciais fixas para fins didáticos
-        if (username === "123" && password === "123") {
+        if (username === "admin" && password === "admin123") {
           localStorage.setItem("loggedIn", "true");
           window.location.href = "landing.html";
         } else {
